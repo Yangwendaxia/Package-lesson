@@ -19,7 +19,7 @@ class MyMD5Hasher
      */
     public function make($value, array $options = [])
     {
-        $salt = isset($options['salt'])?:'';
+        $salt = isset($options['salt']) ? $options['salt'] :'';
 
         return hash('md5',$value.$salt);
     }
@@ -30,9 +30,9 @@ class MyMD5Hasher
      * @param array $options
      * @return bool
      */
-    public function check($value, $hashValue, array $options)
+    public function check($value, $hashValue, array $options = [])
     {
-        $salt = isset($options['salt'])?:'';
+        $salt = isset($options['salt']) ? $options['salt'] : '';
 
         return hash('md5', $value.$salt) === $hashValue;
     }

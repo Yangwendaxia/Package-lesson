@@ -9,10 +9,18 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^7.5@dev"
+    },
     "autoload": {
         "psr-4": {
             "Yangwendaxia\\Hasher\\": "src/"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.laravel-china.org"
         }
     }
 }
